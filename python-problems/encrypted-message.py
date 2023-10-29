@@ -19,3 +19,22 @@ With this in mind, write a code to identify the right location and print it as p
 Execution Time Limit
 10 seconds
 """
+
+
+import ast,sys
+input_str = sys.stdin.read()
+i = 0
+message1 = ""
+message2 = ""
+
+while i < len(input_str) - 1:
+
+    if input_str[i] != "#":
+        message1 += input_str[i]
+        
+    if input_str[i+1]!= "#":
+        message2 += input_str[i + 1]
+
+    i += 2
+
+print(f"{message1},{message2}")
